@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite o País <input type="text" name="loc" id="loc">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function checar() {
+            var loca = window.document.querySelector('input#loc')
+            var res = window.document.querySelector('div#res')
+            var pais = String(loca.value)
+            res.innerHTML = `O País digitado é ${pais}`
+
+            if (pais == 'Brasil') {
+                res.innerHTML = `O País digitado foi <strong>${pais}</strong>, você é do <strong>Brasileiro.</strong>`
+            } else {
+                res.innerHTML = `O País digitado foi <strong>${pais}</strong>, você é <strong>estrangeiro.</strong>`
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
